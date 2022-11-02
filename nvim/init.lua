@@ -1,0 +1,18 @@
+require("jds.plugins-setup")
+-- core
+require("jds.core.options")
+require("jds.core.keymaps")
+require("jds.core.colorscheme")
+-- plugins
+require("jds.plugins.comment")
+require("jds.plugins.nvim-tree")
+require("jds.plugins.lualine")
+require("jds.plugins.telescope")
+require("jds.plugins.lsp.mason")
+require("jds.plugins.lsp.lspconfig")
+require("jds.plugins.lsp.lspsaga")
+require("jds.plugins.lsp.null-ls")
+require("jds.plugins.nvim-cmp")
+require("jds.plugins.treesitter")
+require("jds.plugins.autopairs")
+require("jds.plugins.gitsigns")
