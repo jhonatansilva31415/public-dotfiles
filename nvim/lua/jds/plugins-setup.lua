@@ -27,43 +27,50 @@ if not status then
 end
 
 return packer.startup(function(use)
-  use("wbthomason/packer.nvim")
+	use("wbthomason/packer.nvim")
 
-  -- lua functions that many plugins use
-  use("nvim-lua/plenary.nvim")
+	-- lua functions that many plugins use
+	use("nvim-lua/plenary.nvim")
 
-  use("bluz71/vim-nightfly-guicolors")
-  -- tmux & split window navigation
-  use("christoomey/vim-tmux-navigator")
-  use("szw/vim-maximizer") -- maximizes and restores current window
+	-- themes
+	use("mhartington/oceanic-next")
+	use("morhetz/gruvbox")
+	use("drewtempelmeyer/palenight.vim")
+	use("bluz71/vim-nightfly-guicolors")
 
-  -- essentials
-  -- use ys(motion)(character)
-  -- ysw" => this will add double quotes to the word you are in
-  -- dsw" => will delete
-  -- cs"' => will change double quotes to single quotes
-  use("tpope/vim-surround")
-  -- yw then grw => replaces the text you copied to the text you are in
-  use("vim-scripts/ReplaceWithRegister")
+	-- tmux & split window navigation
+	use("christoomey/vim-tmux-navigator")
+	use("szw/vim-maximizer") -- maximizes and restores current window
 
-  -- commenting with gc
-  -- gc9j, or gcc for inline comments
-  use("numToStr/Comment.nvim")
+	-- essentials
+	-- use ys(motion)(character)
+	-- ysw" => this will add double quotes to the word you are in
+	-- dsw" => will delete
+	-- cs"' => will change double quotes to single quotes
+	use("tpope/vim-surround")
+	-- yw then grw => replaces the text you copied to the text you are in
+	use("vim-scripts/ReplaceWithRegister")
 
-  -- file explorer
-  -- to add a file press a then the name of the file
-  use("nvim-tree/nvim-tree.lua")
-  -- icons
-  use("kyazdani42/nvim-web-devicons")
+	-- commenting with gc
+	-- gc9j, or gcc for inline comments
+	use("numToStr/Comment.nvim")
 
-  -- statusline 
-  use("nvim-lualine/lualine.nvim")
+	-- file explorer
+	-- to add a file press a then the name of the file
+	use("nvim-tree/nvim-tree.lua")
+	-- icons
+	use("kyazdani42/nvim-web-devicons")
 
-  -- fuzzy finding w/ telescope
+	-- statusline
+	use("nvim-lualine/lualine.nvim")
+
+	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+	-- projects with telescope
+	use("nvim-telescope/telescope-project.nvim")
 
-  -- autocompletion
+	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
@@ -72,11 +79,11 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
-  -- lsp
-  -- managing & installing lsp servers, linters & formatters
+	-- lsp
+	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
-  -- configuring lsp servers
+	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
@@ -102,7 +109,13 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-  if packer_bootstrap then
+	-- which key
+	use("folke/which-key.nvim")
+
+	-- dashboard
+	use("glepnir/dashboard-nvim")
+
+	if packer_bootstrap then
 		require("packer").sync()
 	end
 end)

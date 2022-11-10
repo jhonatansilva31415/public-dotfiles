@@ -33,7 +33,6 @@ opt.clipboard:append("unnamedplus")
 
 -- splt windows
 opt.splitright = true
-opt.splitbelow = trueo
+opt.splitbelow = true
 
 opt.iskeyword:append("-")
-
