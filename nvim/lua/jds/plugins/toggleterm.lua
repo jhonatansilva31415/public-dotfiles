@@ -6,7 +6,6 @@ end
 toggleterm.setup({
 	-- size can be a number or function which is passed the current terminal
 	size = 20,
-	open_mapping = [[<c-\>]],
 	hide_numbers = true, -- hide the number column in toggleterm buffers
 	shade_filetypes = {},
 	shade_terminals = true,
@@ -44,6 +43,11 @@ end
 local unshaped_work = Terminal:new({ cmd = "nvim ~/storage/second-brain/notes/unshaped-work.md" })
 function M._toggleunshapedwork()
 	unshaped_work:toggle()
+end
+
+local buffernotes = Terminal:new({ cmd = "nvim ~/storage/second-brain/notes/buffer.md" })
+function M._togglebuffernotes()
+	buffernotes:toggle()
 end
 
 return M

@@ -54,9 +54,13 @@ keymap.set("n", "<leader>zpf", "<cmd>lua require('jds.plugins.telescope').find_p
 keymap.set("n", "<leader>zps", "<cmd>lua require('jds.plugins.telescope').search_projects()<cr>")
 keymap.set("n", "<leader>za", "<cmd>lua require('jds.plugins.telescope').second_brain()<cr>")
 
+-- quick access to certain notes via toggleterm
+keymap.set("n", "<leader>zu", "<cmd>lua require('jds.plugins.toggleterm')._toggleunshapedwork()<cr>")
+keymap.set("n", "<leader>zb", "<cmd>lua require('jds.plugins.toggleterm')._togglebuffernotes()<cr>")
+
 -- projects
 keymap.set("n", "<leader>p", "<cmd>Telescope project<cr>")
 
 -- toggleterm
+keymap.set("n", "<leader><leader>", "<cmd>ToggleTerm<cr>")
 keymap.set("n", "<leader>tp", "<cmd>lua require('jds.plugins.toggleterm')._togglepython()<cr>")
-keymap.set("n", "<leader>tu", "<cmd>lua require('jds.plugins.toggleterm')._toggleunshapedwork()<cr>")
