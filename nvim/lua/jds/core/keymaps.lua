@@ -17,13 +17,14 @@ keymap.set("n", "qk", "20kzz")
 keymap.set("n", "<leader>wv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>wh", "<C-w>s") -- split horizontally
 keymap.set("n", "<leader>we", "<C-w>=") -- split equal width
+keymap.set("n", "<leader>wt", "<C-w>T") -- send to tab, gt moves around
 keymap.set("n", "<leader>wx", ":close<CR>") -- close current window
 
 -- tabs
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open a new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") -- next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") -- previous tab
+-- keymap.set("n", "<leader>to", ":tabnew<CR>") -- open a new tab
+-- keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+-- keymap.set("n", "<leader>tn", ":tabn<CR>") -- next tab
+-- keymap.set("n", "<leader>tp", ":tabp<CR>") -- previous tab
 
 -- plugin keymaps
 
@@ -46,11 +47,16 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope colorscheme<cr>") -- find string u
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- notes && projects
-keymap.set("n", "<leader>znf", "<cmd>lua require('jds.plugins.telescope').find_notes()<cr>")
-keymap.set("n", "<leader>zns", "<cmd>lua require('jds.plugins.telescope').search_notes()<cr>")
+keymap.set("n", "<F12>", "<cmd>lua require('jds.plugins.telescope').find_notes()<cr>")
+keymap.set("n", "<F11>", "<cmd>lua require('jds.plugins.telescope').search_notes()<cr>")
 
 keymap.set("n", "<leader>zpf", "<cmd>lua require('jds.plugins.telescope').find_projects()<cr>")
 keymap.set("n", "<leader>zps", "<cmd>lua require('jds.plugins.telescope').search_projects()<cr>")
-
 keymap.set("n", "<leader>za", "<cmd>lua require('jds.plugins.telescope').second_brain()<cr>")
+
+-- projects
 keymap.set("n", "<leader>p", "<cmd>Telescope project<cr>")
+
+-- toggleterm
+keymap.set("n", "<leader>tp", "<cmd>lua require('jds.plugins.toggleterm')._togglepython()<cr>")
+keymap.set("n", "<leader>tu", "<cmd>lua require('jds.plugins.toggleterm')._toggleunshapedwork()<cr>")

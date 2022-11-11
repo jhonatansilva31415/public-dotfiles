@@ -115,6 +115,12 @@ return packer.startup(function(use)
 	-- dashboard
 	use("glepnir/dashboard-nvim")
 
+	-- leap/lightspeed navigation
+	use("ggandor/lightspeed.nvim")
+
+	-- terminal
+	use("akinsho/toggleterm.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

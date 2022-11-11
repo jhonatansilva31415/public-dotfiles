@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/hphesto/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["lightspeed.nvim"] = {
+    loaded = true,
+    path = "/home/hphesto/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
+    url = "https://github.com/ggandor/lightspeed.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/home/hphesto/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -235,6 +240,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hphesto/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/hphesto/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["typescript.nvim"] = {
     loaded = true,
