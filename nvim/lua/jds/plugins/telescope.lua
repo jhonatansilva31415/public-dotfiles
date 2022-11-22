@@ -26,7 +26,7 @@ telescope.setup({
 	extensions = {
 		project = {
 			base_dirs = {
-				"~/storage/second-brain/projects",
+				"~/storage/projects",
 			},
 			hidden_files = true, -- default: false
 			theme = "dropdown",
@@ -42,7 +42,7 @@ local M = {}
 function M.find_notes()
 	require("telescope.builtin").find_files({
 		shorten_path = true,
-		cwd = "~/storage/second-brain/notes/",
+		cwd = "~/storage/notes/",
 		prompt_title = "~ notes ~",
 		height = 10,
 		layout_strategy = "vertical",
@@ -52,7 +52,7 @@ end
 function M.search_notes()
 	require("telescope.builtin").live_grep({
 		shorten_path = true,
-		cwd = "~/storage/second-brain/notes/",
+		cwd = "~/storage/notes/",
 		prompt_title = "~ notes ~",
 		height = 10,
 		layout_strategy = "vertical",
@@ -62,7 +62,7 @@ end
 function M.find_projects()
 	require("telescope.builtin").find_files({
 		shorten_path = true,
-		cwd = "~/storage/second-brain/projects/",
+		cwd = "~/storage/projects/",
 		prompt = "~ projects ~",
 		height = 10,
 		layout_strategy = "vertical",
@@ -72,7 +72,7 @@ end
 function M.search_projects()
 	require("telescope.builtin").live_grep({
 		shorten_path = true,
-		cwd = "~/storage/second-brain/projects/",
+		cwd = "~/storage/projects/",
 		prompt_title = "~ projects ~",
 		height = 10,
 		layout_strategy = "vertical",
@@ -81,7 +81,7 @@ end
 
 function M.second_brain()
 	require("telescope.builtin").find_files({
-		cwd = "~/storage/second-brain",
+		cwd = "~/storage/",
 		prompt_title = "~ todos ~",
 		height = 10,
 		layout_strategy = "vertical",

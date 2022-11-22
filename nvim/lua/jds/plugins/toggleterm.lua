@@ -40,12 +40,12 @@ function M._togglepython()
 	python:toggle()
 end
 
-local unshaped_work = Terminal:new({ cmd = "nvim ~/storage/second-brain/notes/unshaped-work.md" })
+local unshaped_work = Terminal:new({ cmd = "nvim ~/storage/notes/unshaped-work.md" })
 function M._toggleunshapedwork()
 	unshaped_work:toggle()
 end
 
-local buffernotes = Terminal:new({ cmd = "nvim ~/storage/second-brain/notes/buffer.md" })
+local buffernotes = Terminal:new({ cmd = "nvim ~/storage/notes/buffer.md" })
 function M._togglebuffernotes()
 	buffernotes:toggle()
 end
